@@ -17,5 +17,13 @@ puts "Creating freebies..."
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
 # Create freebies Here
+dev = Dev.first
+company = Company.first
+
+Freebie.create(item_name: "Podcast", value: rand(1..10), company_id: company.id, dev_id: dev.id)
+Freebie.create(item_name: "Stickers", value: rand(1..10), company_id: company.id, dev_id: dev.id)
+Freebie.create(item_name: "Mug", value: rand(1..10), company_id: company.id, dev_id: dev.id)
+Freebie.create(item_name: "T-Shirt", value: rand(1..10), company_id: company.id, dev_id: dev.id)
 
 puts "Seeding done!"
+
